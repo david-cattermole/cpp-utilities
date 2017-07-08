@@ -6,7 +6,7 @@
 #define FILESYSTEM_UTILS_H
 
 // Utils
-#include <utilities/numberUtils.h>
+#include <numberUtils.h>
 
 // STL
 #include <cmath>     // floor, ceil, round, pow

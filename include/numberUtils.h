@@ -5,9 +5,6 @@
 #ifndef NUMBER_UTILS_H
 #define NUMBER_UTILS_H
 
-// #rspImagePlane <vector>   // vector
-// #rspImagePlane <string>   // string
-// #rspImagePlane <iostream> // cout, cerr
 #include <cmath>    // fabs
 
 // Radians / Degrees
@@ -22,14 +19,22 @@
 #define KILOBYTES_TO_GIGABYTES 1048576 // int(pow(2, 20))
 
 
-namespace number
-{
-  static inline
-  bool floatApproxEqual(float left, float right)
-  {
-    const float eps = 0.0001f;
-    return fabs(left - right) < eps;
-  }
+namespace number {
+
+    // Compare if two floating point numbers are equal.
+    // Deprecated, in favour of 'isApproxEqual'.
+    static inline
+    bool floatApproxEqual(float left, float right) {
+        const float eps = 0.0001f;
+        return fabs(left - right) < eps;
+    }
+
+    // Compare doubles or float numbers for equality
+    template <typename T>
+    static inline
+    bool isApproxEqual(T left, T right, const T epsilon=0.0001) {
+        return fabs(left - right) < epsilon;
+    }
 
 }
 

@@ -9,29 +9,32 @@
 #include <sstream>  // stringstream
 #include <cmath>    // fabs
 
-namespace string
-{
+namespace string {
 
-  // Convert a number to a string
-  template<typename NUM_TYPE>
-  inline
-  std::string numberToString(NUM_TYPE num)
-  {
-    std::stringstream ss;
-    ss << num;
-    return ss.str();
-  }
+    // Convert a number to a string
+    template<typename NUM_TYPE>
+    inline
+    std::string numberToString(NUM_TYPE num) {
+        std::stringstream ss;
+        ss << num;
+        return ss.str();
+    }
 
-  // Convert a string to a number.
-  template<typename NUM_TYPE>
-  inline
-  NUM_TYPE stringToNumber(const std::string &text)
-  {
-    std::stringstream ss(text);
-    NUM_TYPE result;
-    return ss >> (result ? result : 0);
-  }
+    // Convert a string to a number.
+    template<typename NUM_TYPE>
+    inline
+    NUM_TYPE stringToNumber(const std::string &text) {
+        std::stringstream ss(text);
+        NUM_TYPE result;
+        ss >> result;
+        if (!result) {
+            result = 0;
+        }
+        return result;
+    }
 
+    // TODO: Get file number from file path string.
+    // TODO: Add file number with padding into string.
 }
 
 #endif // STRING_UTILS_H

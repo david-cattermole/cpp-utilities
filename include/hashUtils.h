@@ -151,7 +151,7 @@ namespace hash
   // Merges multiple hashes together into a single hash.
   template<typename R, typename K, typename A>
   inline
-  R mergeHashes(const std::vector<K, A> &hashes, A seed = 0)
+  R mergeHashes(const std::vector<K, A> &hashes, R seed = 0)
   {
     typename std::vector<K>::const_iterator it;
     R result = seed;
