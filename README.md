@@ -4,9 +4,9 @@ C++ Utilities for debug, generic filesystem checks and more.
 
 This is a library of small helpful snippets.  
 
-Most code is only tested for use in Linux, and there may be basic support for Windows or OS X, but no testing on those platforms. 
+Most code is only tested for use in Linux, and there may be basic support for Windows or OS X, but no testing on those platforms. Compile and run the tests with the 'runTests.sh' file, or running the compiled executables directly.
 
-## Features
+# Features
 
 - Debug
   - Basic printing macros - Info, Debug, Warning, Error, etc
@@ -29,11 +29,20 @@ Most code is only tested for use in Linux, and there may be basic support for Wi
 - Operating System (Linux only)
   - Process memory usage.
   - Get total RAM size.
+- Visual Effects
+  - Frame Relative time sampling calculations
+- File Path
+  - Parse a file path to determine frame number start / end index.
+  - Image sequence formating for adding frame numbers.
 
-## Usage
+# Usage
 
 _To be written._
 
-## Dependencies
+# Build and Install
+
+_To be written._
+
+# Dependencies
 
 - C++ compiler with support for C++0x or above
