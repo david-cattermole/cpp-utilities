@@ -1,17 +1,21 @@
-/*
- * Generic string helper functions
+/*! Generic string helper functions.
  */
 
 #ifndef STRING_UTILS_H
 #define STRING_UTILS_H
 
-#include <cstdio>   // FILE, fwrite, fopen
+// #include <cstdio>   // FILE, fwrite, fopen
 #include <sstream>  // stringstream
 #include <cmath>    // fabs
 
 namespace string {
 
-    // Convert a number to a string
+    /*! Convert a number to a string
+     *
+     * @tparam NUM_TYPE
+     * @param num
+     * @return
+     */
     template<typename NUM_TYPE>
     inline
     std::string numberToString(NUM_TYPE num) {
@@ -20,7 +24,12 @@ namespace string {
         return ss.str();
     }
 
-    // Convert a string to a number.
+    /*! Convert a string to a number.
+     *
+     * @tparam NUM_TYPE
+     * @param text
+     * @return
+     */
     template<typename NUM_TYPE>
     inline
     NUM_TYPE stringToNumber(const std::string &text) {
@@ -33,8 +42,6 @@ namespace string {
         return result;
     }
 
-    // TODO: Get file number from file path string.
-    // TODO: Add file number with padding into string.
 }
 
 #endif // STRING_UTILS_H

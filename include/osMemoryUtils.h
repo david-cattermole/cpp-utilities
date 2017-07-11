@@ -1,5 +1,4 @@
-/*
- * Utilities and definitions related to OS level functions.
+/*! Utilities and definitions related to OS level functions.
  */
 
 #ifndef OS_MEMORY_UTILS_H

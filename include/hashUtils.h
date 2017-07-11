@@ -1,5 +1,4 @@
-/*
- * Implements simple hashing on generic data.
+/*! Implements simple hashing on generic data.
  *
  * See this page for an interesting article on hash collisions:
  * http://softwareengineering.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed
